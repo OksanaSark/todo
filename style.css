@@ -1,0 +1,134 @@
+.counters{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.counters__total {
+    padding: 5px;
+    color: #0000ff;
+    background-color: rgba(0, 0, 255, 0.1);
+    border-radius: 5px;
+}
+.counters__success {
+    padding: 5px;
+    color: #3CB371;
+    background-color: rgba(123, 239, 178, 0.3);
+    border-radius: 5px;
+}
+.counters__pending {
+    padding: 5px;
+    color: #FF4500;
+    background-color: rgba(255, 69, 0, 0.1);
+    border-radius: 5px;
+    margin-right: 400px;
+}
+.container__form {
+    margin-top: 20px;
+    overflow: hidden;
+}
+.textInput {
+    padding: 15px;
+    position: relative;
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #40cfff;
+    width: 100%;
+    font-size: 15px;
+}
+.submitInput {
+    cursor: pointer;
+    outline: none;
+    height: 25px;
+    border: none;
+    position: absolute;
+    width: 8%;
+    top: 115px;
+    right: -20px;
+    background: url("icons/arrow.svg") center center / auto no-repeat;
+}
+.todo {
+    /*position: static;*/
+    margin-bottom: 100px;
+    /*position: relative;*/
+}
+.todo__item {
+    margin: 35px 15px 35px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+.todo__description {
+    font-size: 18px;
+    color: gray;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+.todo__date {
+    font-size: 14px;
+    color: gray;
+    width: 10%;
+}
+.checkbox {
+    display: none;
+}
+.fake-checkbox{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #40cfff;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.fake-checkbox:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("icons/checkbox.svg") center center / auto no-repeat #40cfff;
+    opacity: 0;
+    transition: .2s;
+}
+
+.checkbox:checked + .fake-checkbox:before{
+    opacity: 1;
+}
+
+.todo__delete{
+    cursor: pointer;
+}
+.delete{
+    width: 100%;
+    position: fixed;
+    left: 10px;
+    bottom: 0px;
+    background: white;
+}
+.delete_all{
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background: transparent;
+    margin: 20px;
+    color: #40cfff;
+    font-size: 19px;
+    padding: 5px 30px 5px 5px ;
+    background: url("icons/basket.svg") center right -2px/ auto no-repeat;
+}
+
+@media (max-width: 1200px){
+    .submitInput{
+        right: -15px;
+    }
+}
+@media (max-width: 991px){
+    .submitInput{
+        right: -10px;
+    }
+}
